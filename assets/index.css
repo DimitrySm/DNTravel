@@ -657,6 +657,11 @@ button.burger.on:before {
   }
   .footer__link {
     font-size: 20px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s linear;
+  }
+  .footer__link:hover {
+    border-bottom: 2px solid #fff;
   }
   .footer__social {
     justify-content: center;
@@ -664,6 +669,12 @@ button.burger.on:before {
   .footer__social__wrapper {
     margin-right: 50px;
     background-color: #213f36;
+    transition: all 0.3s linear;
+  }
+  .footer__social__wrapper:hover {
+    transform: scale(1.2);
+
+    transform: rotateZ(405deg);
   }
   .social-icon {
     fill: #fff;
