@@ -36,6 +36,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1000;
 }
 
 .header__inner {
@@ -364,5 +365,177 @@ button.burger.on:before {
     border-radius: 50px;
     font-size: 26px;
     padding: 20px 45px;
+  }
+}
+
+/* ************* Popular-places ************ */
+
+.popular-places__inner {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.popular-places__title {
+  width: 100%;
+  margin-bottom: 25px;
+}
+.popular-places__title h2 {
+  font-size: 26px;
+  line-height: 100%;
+  text-align: center;
+
+  color: #7ebfc3;
+}
+
+.popular-places__card {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+
+  background: url(../images/cities/warsawa/warsaw-city.jpg) center no-repeat;
+  background-size: cover;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 20px;
+  margin-bottom: 30px;
+}
+
+.card__country p {
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 100%;
+  color: #ffffff;
+}
+.card__city p {
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  line-height: 100%;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+@media (min-width: 533px) {
+  .popular-places__card {
+    width: 49%;
+  }
+}
+@media (min-width: 1200px) {
+  /* Parallax */
+
+  .intro {
+    min-height: 100vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*  */
+
+  .popular-places__inner {
+    padding: 0;
+    flex-direction: column;
+  }
+  .popular-places__title {
+    width: 100%;
+    height: 200px;
+    background: url(../images/bg/index-bg-2.jpg);
+    background-color: #000;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .popular-places__title h2 {
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 100%;
+    text-align: center;
+    /* height: 100%; */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px 50px;
+    border-radius: 20px;
+  }
+  .popular-places__card1 {
+    background: url(../images/cities/warsawa/attractions/Warsaw-Palace-Square-3.jpg);
+  }
+
+  .popular-places__card {
+    width: 100%;
+    max-width: 100%;
+    height: 600px;
+    border-radius: 0;
+    filter: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    min-height: 600px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    align-items: center;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .popular-places__bg-color {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    transition: all 0.2s linear;
+  }
+
+  .popular-places__card:hover .popular-places__bg-color,
+  .popular-places__card1:hover .popular-places__bg-color {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .card__country p {
+    display: none;
+  }
+  .card__city p {
+    display: none;
+  }
+  .card__city__hover {
+    text-align: center;
+  }
+  .card__city__hover p {
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: #e0dfdc;
+    letter-spacing: 0.1em;
+    text-shadow: 0 -1px 0 #ffffff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c,
+      0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424,
+      0 7px 0 #222222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c,
+      0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414,
+      0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
   }
 }
