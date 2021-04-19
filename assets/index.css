@@ -155,7 +155,6 @@ button.burger.on:before {
 }
 
 .moon:active {
-  /* background-color: #000; */
   fill: #213f36;
 }
 
@@ -401,7 +400,6 @@ button.burger.on:before {
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 15px 20px;
   margin-bottom: 30px;
 }
@@ -412,6 +410,7 @@ button.burger.on:before {
   font-size: 20px;
   line-height: 100%;
   color: #ffffff;
+  margin-bottom: 15px;
 }
 .card__city p {
   letter-spacing: 0.5px;
@@ -421,25 +420,23 @@ button.burger.on:before {
   font-weight: 300;
 }
 
+.card__city__hover {
+  display: none;
+}
+
 @media (min-width: 533px) {
   .popular-places__card {
     width: 49%;
   }
 }
 @media (min-width: 1200px) {
-  /* Parallax */
-
   .intro {
     min-height: 100vh;
-
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-
-  /*  */
 
   .popular-places__inner {
     padding: 0;
@@ -466,7 +463,6 @@ button.burger.on:before {
     font-size: 36px;
     line-height: 100%;
     text-align: center;
-    /* height: 100%; */
     background-color: rgba(0, 0, 0, 0.5);
     padding: 50px 50px;
     border-radius: 20px;
@@ -487,7 +483,6 @@ button.burger.on:before {
     position: relative;
     min-height: 600px;
 
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -524,6 +519,7 @@ button.burger.on:before {
   }
   .card__city__hover {
     text-align: center;
+    display: block;
   }
   .card__city__hover p {
     font-size: 50px;
@@ -537,5 +533,142 @@ button.burger.on:before {
       0 7px 0 #222222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c,
       0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414,
       0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+  }
+}
+
+/* ******** FOOTER *********** */
+
+.footer {
+  background-color: #7ebfc3;
+}
+
+.footer__inner {
+  width: 100%;
+  height: 150px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__link {
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  margin-right: 10px;
+}
+.footer__link:last-child {
+  margin-right: 0;
+}
+
+.footer__link::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1px;
+  height: 20px;
+  background-color: #ffffff;
+  top: 0;
+  right: -5px;
+}
+
+.footer__link:last-child::after {
+  display: none;
+}
+
+.footer__social {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__social__wrapper {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transform: rotate(45deg);
+  border-radius: 8px;
+  /* transform-origin: 0 100%; */
+}
+
+.footer__social__link {
+  transform: rotate(-45deg);
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  fill: #7ebfc3;
+}
+
+@media (min-width: 533px) {
+  .footer__link {
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    margin-right: 30px;
+  }
+  .footer__link::after {
+    width: 2px;
+    height: 25px;
+    right: -15px;
+  }
+  .footer__inner {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .footer__inner {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer {
+    background: url(../images/bg/footer-bg.jpg);
+    background-color: #000;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .footer__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.493);
+  }
+  .footer__link {
+    font-size: 20px;
+  }
+  .footer__social {
+    justify-content: center;
+  }
+  .footer__social__wrapper {
+    margin-right: 50px;
+    background-color: #213f36;
+  }
+  .social-icon {
+    fill: #fff;
+  }
+  .footer__social__wrapper:last-child {
+    margin-right: 0;
   }
 }
