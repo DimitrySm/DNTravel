@@ -367,6 +367,15 @@ button.burger.on:before {
   }
 }
 
+@media (min-width: 1200px) {
+  .intro {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 /* ************* Popular-places ************ */
 
 .popular-places__inner {
@@ -430,14 +439,6 @@ button.burger.on:before {
   }
 }
 @media (min-width: 1200px) {
-  .intro {
-    min-height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
   .popular-places__inner {
     padding: 0;
     flex-direction: column;

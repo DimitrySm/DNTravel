@@ -139,6 +139,13 @@ a {
   }
 }
 @media (min-width: 1200px) {
+  .intro {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .intro__inner {
     padding: 0;
     max-width: 1200px;
@@ -301,10 +308,17 @@ a {
 }
 
 @media (min-width: 1200px) {
+  .attractions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   .container {
     max-width: 1200px;
     margin: 0 auto;
   }
+
   .attractions__inner {
     padding-left: 0;
     padding-right: 0;
@@ -341,6 +355,7 @@ a {
   .attractions__list {
     width: 100%;
   }
+
   .attractions__list__item {
     margin-bottom: 30px;
   }
@@ -408,7 +423,7 @@ a {
 /* FOOTER */
 
 .footer {
-  background: url(../images/cities/warsawa/warsawa-ciry-bg.jpg);
+  background: url(../images/cities/warsawa/warsawa-ciry-bg.jpg) bottom;
   background-color: #000;
   background-attachment: fixed;
   background-position: center;
