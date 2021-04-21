@@ -242,6 +242,8 @@ button.burger.on:before {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+
+  overflow: hidden;
 }
 .container {
   padding: 0 50px;
