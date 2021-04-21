@@ -48,7 +48,6 @@ a {
   height: 440px;
   background: url(../images/bg/blog-menu-bg.jpeg) center no-repeat;
   background-size: cover;
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -57,7 +56,6 @@ a {
 .intro__inner {
   padding-right: 110px;
   position: relative;
-  /* width: 100%; */
 }
 
 .menu-button__wrapper {
