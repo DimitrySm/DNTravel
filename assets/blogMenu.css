@@ -573,3 +573,12 @@ a {
     overflow: hidden;
   }
 }
+
+/* Footer  */
+.footer {
+  background: url(../images/bg/blog-menu-bg.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
