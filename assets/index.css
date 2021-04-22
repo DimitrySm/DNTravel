@@ -1,0 +1,511 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  min-width: 360px;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  color: #000;
+  font-size: 14px;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #213f36;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* ************* INTRO **************** */
+
+.intro {
+  background: url(../images/bg/index-bg.jpg) bottom center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+
+  overflow: hidden;
+}
+.container {
+  padding: 0 50px;
+}
+
+.intro__inner {
+  min-width: 300px;
+  min-height: 400px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 57px;
+}
+
+.intro__title {
+  font-size: 36px;
+  line-height: 130%;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.intro__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.intro__text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.intro__btn {
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  color: #ffffff;
+
+  border: none;
+  outline: none;
+  padding: 10px 23px;
+  background: #7ebfc3;
+  border-radius: 20px;
+
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.intro__btn:hover {
+  background: #7ebfc3;
+  box-shadow: 0 15px 20px rgba(35, 210, 216, 0.4);
+  color: white;
+  transform: translateY(-7px);
+}
+
+.intro__btn:active {
+  background: #63a0a3;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 533px) {
+  .intro__title {
+    font-size: 42px;
+  }
+
+  .intro__subtitle {
+    font-size: 24px;
+  }
+
+  .intro__text {
+    font-size: 18px;
+  }
+
+  .intro__btn {
+    font-size: 16px;
+    padding: 15px 35px;
+  }
+}
+@media (min-width: 768px) {
+  .intro__inner {
+    padding: 50px 57px;
+  }
+  .intro__title {
+    font-size: 62px;
+    margin-bottom: 60px;
+  }
+
+  .intro__subtitle {
+    font-size: 34px;
+    margin-bottom: 40px;
+  }
+
+  .intro__text {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .intro__btn {
+    border-radius: 50px;
+    font-size: 26px;
+    padding: 15px 35px;
+  }
+}
+@media (min-width: 992px) {
+  .intro__inner {
+    padding: 50px 57px;
+  }
+  .intro__title {
+    font-size: 82px;
+    margin-bottom: 60px;
+  }
+
+  .intro__subtitle {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .intro__text {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .intro__btn {
+    border-radius: 50px;
+    font-size: 26px;
+    padding: 20px 45px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+/* ************* Popular-places ************ */
+
+.popular-places__inner {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.popular-places__title {
+  width: 100%;
+  margin-bottom: 25px;
+}
+.popular-places__title h2 {
+  font-size: 26px;
+  line-height: 100%;
+  text-align: center;
+
+  color: #7ebfc3;
+}
+
+.popular-places__card {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+
+  background: url(../images/cities/warsawa/warsaw-city.jpg) center no-repeat;
+  background-size: cover;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  margin-bottom: 30px;
+}
+
+.card__country p {
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 100%;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+.card__city p {
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  line-height: 100%;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.card__city__hover {
+  display: none;
+}
+
+@media (min-width: 533px) {
+  .popular-places__card {
+    width: 49%;
+  }
+}
+@media (min-width: 1200px) {
+  .popular-places__inner {
+    padding: 0;
+    flex-direction: column;
+  }
+  .popular-places__title {
+    width: 100%;
+    height: 200px;
+    background: url(../images/bg/index-bg-2.jpg);
+    background-color: #000;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .popular-places__title h2 {
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px 50px;
+    border-radius: 20px;
+  }
+  .popular-places__card1 {
+    background: url(../images/cities/warsawa/attractions/Warsaw-Palace-Square-3.jpg);
+  }
+
+  .popular-places__card {
+    width: 100%;
+    max-width: 100%;
+    height: 600px;
+    border-radius: 0;
+    filter: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    min-height: 600px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    align-items: center;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .popular-places__bg-color {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    transition: all 0.2s linear;
+  }
+
+  .popular-places__card:hover .popular-places__bg-color,
+  .popular-places__card1:hover .popular-places__bg-color {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .card__country p {
+    display: none;
+  }
+  .card__city p {
+    display: none;
+  }
+  .card__city__hover {
+    text-align: center;
+    display: block;
+  }
+  .card__city__hover p {
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: #e0dfdc;
+    letter-spacing: 0.1em;
+    text-shadow: 0 -1px 0 #ffffff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c,
+      0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424,
+      0 7px 0 #222222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c,
+      0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414,
+      0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+  }
+}
+
+/* ******** FOOTER *********** */
+
+.footer {
+  background-color: #7ebfc3;
+}
+
+.footer__inner {
+  width: 100%;
+  height: 150px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__link {
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  margin-right: 10px;
+}
+.footer__link:last-child {
+  margin-right: 0;
+}
+
+.footer__link::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1px;
+  height: 20px;
+  background-color: #ffffff;
+  top: 0;
+  right: -5px;
+}
+
+.footer__link:last-child::after {
+  display: none;
+}
+
+.footer__social {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__social__wrapper {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transform: rotate(45deg);
+  border-radius: 8px;
+  /* transform-origin: 0 100%; */
+}
+
+.footer__social__link {
+  transform: rotate(-45deg);
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  fill: #7ebfc3;
+}
+
+@media (min-width: 533px) {
+  .footer__link {
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    margin-right: 30px;
+  }
+  .footer__link::after {
+    width: 2px;
+    height: 25px;
+    right: -15px;
+  }
+  .footer__inner {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .footer__inner {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer {
+    background: url(../images/bg/footer-bg.jpg);
+    background-color: #000;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .footer__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.493);
+  }
+  .footer__link {
+    font-size: 20px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s linear;
+  }
+  .footer__link:hover {
+    border-bottom: 2px solid #fff;
+  }
+  .footer__social {
+    justify-content: center;
+  }
+  .footer__social__wrapper {
+    margin-right: 50px;
+    background-color: #213f36;
+    transition: all 0.3s linear;
+  }
+  .footer__social__wrapper:hover {
+    transform: scale(1.2);
+
+    transform: rotateZ(405deg);
+  }
+  .social-icon {
+    fill: #fff;
+  }
+  .footer__social__wrapper:last-child {
+    margin-right: 0;
+  }
+}
