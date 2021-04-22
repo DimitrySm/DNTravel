@@ -46,11 +46,19 @@ a {
 .post-section {
   margin-top: 60px;
   margin-bottom: 10px;
-}
-.post-section__inner {
+
+  /* display: flex;
   flex-direction: column;
+  align-items: center; */
+}
+
+.post-section__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 25px 15px;
   position: relative;
+  width: 100%;
 }
 
 .post__img {
@@ -75,7 +83,6 @@ a {
 
 .post__content {
   width: 100%;
-  overflow: hidden;
 }
 
 .post__tags {
@@ -135,6 +142,19 @@ a {
   }
 }
 @media (min-width: 1200px) {
+  .post-section-bg {
+    height: 600px;
+    background: url(../images/cities/warsawa/attractions/Warsaw-Palace-Square-3.jpg)
+      center no-repeat;
+    background-size: cover;
+  }
+  .post-section {
+    margin: 0;
+  }
+  .post__img {
+    display: none;
+  }
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -158,5 +178,16 @@ a {
   .post__text {
     font-size: 18px;
     line-height: 22px;
+  }
+}
+
+/* Footer */
+@media (min-width: 1200px) {
+  .footer {
+    background: url(../images/cities/warsawa/attractions/Warsaw-Palace-Square-3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

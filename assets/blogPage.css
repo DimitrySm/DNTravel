@@ -390,10 +390,12 @@ a {
 }
 
 /* Footer  */
-.footer {
-  background: url(../images/bg/blog-bg.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+@media (min-width: 1200px) {
+  .footer {
+    background: url(../images/bg/blog-bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

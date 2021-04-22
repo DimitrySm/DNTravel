@@ -161,8 +161,8 @@ button.burger.on:before {
   .header__inner {
     max-width: 1200px;
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 0px 0px 10px 10px;
+    background: none;
+    border-radius: 0;
   }
   .header__burger,
   .light__mode {
@@ -178,12 +178,22 @@ button.burger.on:before {
     font-size: 26px;
     line-height: 100%;
     text-align: center;
-
+    background-color: #213f36;
+    padding: 15px 20px;
     color: #ffffff;
-
+    border-radius: 10px;
     transition: all 0.2s linear;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
+
+  .nav__link.active {
+    background-color: #b7eaaf;
+    color: #000;
+  }
+
   .nav__link:hover {
     color: #7ebfc3;
+    background-color: #b7eaaf;
+    color: #000;
   }
 }

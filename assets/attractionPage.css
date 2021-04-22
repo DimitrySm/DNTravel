@@ -216,10 +216,12 @@ a {
 
 /* Footer */
 
-.footer {
-  background: url(../images/cities/warsawa/attractions/Warsaw-Palace-Square-2.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+@media (min-width: 1200px) {
+  .footer {
+    background: url(../images/cities/warsawa/attractions/Warsaw-Palace-Square-2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
