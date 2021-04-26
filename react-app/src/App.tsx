@@ -10,20 +10,22 @@ import BlogsPage from "./views/BlogsPage/BlogsPage";
 import BlogMenuPage from "./views/BlogMenuPage/BlogMenuPage";
 import AttractionPage from "./views/AttractionPage/AttractionPage";
 import AboutUsPage from "./views/AboutUsPage/AboutUsPage";
+import { BrowserRouter, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <AboutUsPage />
-      {/* <AttractionPage /> */}
-      {/* <BlogMenuPage /> */}
-      {/* <BlogPostPage /> */}
-      {/* <BlogsPage /> */}
-      {/* <MainPage /> */}
-      {/* <CityPage /> */}
-      {/* <CitiesPage /> */}
-      {/* <Footer /> */}
+      <BrowserRouter>
+        <Header />
+        <Route path="/main" render={() => <MainPage />} />
+        <Route path="/cities" render={() => <CitiesPage />} />
+        <Route path="/blogMenu" render={() => <BlogMenuPage />} />
+        <Route path="/aboutUs" render={() => <AboutUsPage />} />
+
+        <Route path="/aboutUs" render={() => <Footer />} />
+        <Route path="/main" render={() => <Footer />} />
+        <Route path="/blogMenu" render={() => <Footer />} />
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./Header.module.css";
 import moonSVG from "../../assets/images/svg/moon.svg";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -12,9 +13,9 @@ const Header = () => {
           </button>
         </div>
         <div className={s.dropDown__menu}>
-          <a href="#3" className={s.dropDown__menu__link}>
+          <NavLink to="/main" className={s.dropDown__menu__link}>
             Главная
-          </a>
+          </NavLink>
           <a href="#3" className={s.dropDown__menu__link}>
             Города
           </a>
@@ -29,21 +30,41 @@ const Header = () => {
           </a>
         </div>
         <nav className={s.av}>
-          <a href="#3" className={`${s.nav__link} ${s.active}`}>
+          <NavLink
+            to="/main"
+            className={s.nav__link}
+            activeClassName={s.active}
+          >
             Главная
-          </a>
-          <a href="#3" className={s.nav__link}>
+          </NavLink>
+          <NavLink
+            to="/cities"
+            className={s.nav__link}
+            activeClassName={s.active}
+          >
             Города
-          </a>
-          <a href="#3" className={s.nav__link}>
+          </NavLink>
+          <NavLink
+            to="/lifehaks"
+            className={s.nav__link}
+            activeClassName={s.active}
+          >
             Лайфхаки
-          </a>
-          <a href="#3" className={s.nav__link}>
+          </NavLink>
+          <NavLink
+            to="/blogMenu"
+            className={s.nav__link}
+            activeClassName={s.active}
+          >
             Блог
-          </a>
-          <a href="#3" className={s.nav__link}>
+          </NavLink>
+          <NavLink
+            to="/aboutUs"
+            className={s.nav__link}
+            activeClassName={s.active}
+          >
             О нас
-          </a>
+          </NavLink>
         </nav>
         <div className={s.light__mode}>
           <button className={s.light__mode__btn}>

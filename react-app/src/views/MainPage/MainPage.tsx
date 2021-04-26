@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import PopularPlaceCard from "../../components/PopularPlaceCard/PopularPlaceCard";
 import s from "./MainPage.module.css";
 
 const MainPage = () => {
@@ -17,7 +19,9 @@ const MainPage = () => {
             <p className={s.intro__text}>
               Не упусти всё самое интересное из путешесвия!
             </p>
-            <button className={s.intro__btn}>Поехали</button>
+            <NavLink to="/cities" className={s.intro__btn}>
+              Поехали
+            </NavLink>
           </div>
         </div>
       </section>
@@ -26,19 +30,7 @@ const MainPage = () => {
           <div className={s.popularPlaces__title}>
             <h2>Топ 5 популярных городов</h2>
           </div>
-          <a href="3" className={s.popularPlaces__card}>
-            <div className={s.card__country}>
-              <p>Польша</p>
-            </div>
-            <div className={s.card__city}>
-              <p>Варшава</p>
-            </div>
-            <div className={s.popularPlaces__bgColor}>
-              <div className={s.card__city__hover}>
-                <p>Варшава</p>
-              </div>
-            </div>
-          </a>
+          <PopularPlaceCard />
         </div>
       </section>
     </>
