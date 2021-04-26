@@ -1,54 +1,10 @@
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-body {
-  box-sizing: border-box;
-  min-width: 360px;
-  overflow-x: hidden;
-  margin: 0;
-  font-family: "Mulish", sans-serif;
-  color: #000;
-  font-size: 14px;
-}
-body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #f5f5f5;
-}
-
-body::-webkit-scrollbar {
-  width: 6px;
-  background-color: #f5f5f5;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #213f36;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-}
-
 /* ********** Post *********** */
-.post-section {
+.postSection {
   margin-top: 60px;
   margin-bottom: 10px;
 }
 
-.post-section__inner {
+.postSection__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,18 +89,18 @@ a {
   }
 }
 @media (min-width: 768px) {
-  .post-section {
+  .postSection {
     margin-top: 100px;
   }
 }
 @media (min-width: 1200px) {
-  .post-section-bg {
+  .postSectionBg {
     height: 600px;
-    background: url(../images/cities/warsawa/attractions/Warsaw-Palace-Square-3.jpg)
+    background: url(../../assets/images/cities/warsawa/attractions/Warsaw-Palace-Square-3.jpg)
       center no-repeat;
     background-size: cover;
   }
-  .post-section {
+  .postSection {
     margin: 0;
   }
   .post__img {
@@ -174,16 +130,5 @@ a {
   .post__text {
     font-size: 18px;
     line-height: 22px;
-  }
-}
-
-/* Footer */
-@media (min-width: 1200px) {
-  .footer {
-    background: url(../images/cities/warsawa/attractions/Warsaw-Palace-Square-3.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 }

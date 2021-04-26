@@ -1,7 +1,7 @@
 import React from "react";
-import s from "./Main.module.css";
+import s from "./MainPage.module.css";
 
-const Main = () => {
+const MainPage = () => {
   return (
     <>
       <section className={s.intro}>
@@ -45,4 +45,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default MainPage;

@@ -1,0 +1,482 @@
+.breadcrumb {
+  list-style: none;
+  display: flex;
+
+  padding-left: 0px;
+  margin: 0;
+}
+
+.breadcrumbItem > .breadcrumbLink,
+.breadcrumbItem.active {
+  color: #fff;
+  display: block;
+  background: #7ebfc3;
+  text-decoration: none;
+  position: relative;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 10px 0 5px;
+  text-align: center;
+  margin-right: 23px;
+  user-select: none;
+  transition: all 0.2s linear;
+}
+
+.breadcrumbItem:first-child > .breadcrumbLink {
+  padding-left: 15px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.breadcrumbItem:last-child > .breadcrumbLink,
+.breadcrumbItem.active {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-right: 0;
+  padding-right: 15px;
+}
+
+.breadcrumbItem:first-child > .breadcrumbLink::before,
+.breadcrumbItem:last-child > .breadcrumbLink::after {
+  border: none;
+}
+
+.breadcrumbItem > .breadcrumbLink::before,
+.breadcrumbItem > .breadcrumbLink::after,
+.breadcrumbItem.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 0 solid #7ebfc3;
+  border-width: 17px 10px;
+  width: 0;
+  height: 0;
+  transition: all 0.2s linear;
+}
+
+.breadcrumbItem > .breadcrumbLink::before,
+.breadcrumbItem.active::before {
+  left: -20px;
+  border-left-color: transparent;
+}
+
+.breadcrumbItem > .breadcrumbLink::after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: #7ebfc3;
+}
+
+.breadcrumbItem > .breadcrumbLink:hover {
+  background-color: #4e8083;
+}
+
+.breadcrumbItem > .breadcrumbLink:hover::before {
+  border-color: #4e8083;
+  border-left-color: transparent;
+}
+
+.breadcrumbItem > .breadcrumbLink:hover::after {
+  border-left-color: #4e8083;
+}
+
+.breadcrumbItem.active {
+  color: #7ebfc3;
+  background-color: #f3e5f5;
+}
+
+.breadcrumbItem.active::before {
+  border-color: #f3e5f5;
+  border-left-color: transparent;
+}
+
+/* ********INTRO******** */
+
+.intro {
+  height: 100vh;
+  background: url(../../assets/images/cities/warsawa/warsawa-ciry-bg.jpg) center
+    no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 18px;
+  height: 100vh;
+}
+
+.city__discription {
+  min-width: 325px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  padding: 30px 20px;
+}
+
+.city__discription__title {
+  font-weight: normal;
+  font-size: 36px;
+  color: #000000;
+}
+.city__discription__text {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.city__attractions__links {
+  min-width: 290px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  padding: 15px 0px;
+}
+
+.city__attractions__link {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.city__attractions__link::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 45px;
+  height: 1px;
+  background-color: #000;
+  bottom: -10px;
+}
+.city__attractions__link:last-child {
+  margin-bottom: 0;
+}
+.city__attractions__link:last-child::after {
+  display: none;
+}
+
+@media (min-width: 533px) {
+  .intro__inner {
+    padding: 100px;
+  }
+  .city__discription__title {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .intro__inner {
+    padding: 100px 162px;
+  }
+  .city__discription__title {
+    margin-bottom: 30px;
+  }
+  .city__discription__title {
+    font-size: 46px;
+    margin-bottom: 40px;
+  }
+  .city__discription__text {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .city__attractions__links {
+    padding: 25px 70px;
+  }
+  .city__attractions__link {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  .intro {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .intro__inner {
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .city__discription {
+    width: 40%;
+  }
+}
+
+/* *************** ATTRACTIONS **************** */
+
+.attractions__inner {
+  padding: 20px 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.breadcrumb__wrapper {
+  width: 100%;
+}
+
+.attractions__list {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.attraction__title {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+}
+
+.triangle {
+  position: absolute;
+  top: 5px;
+  margin-left: 5px;
+  border: 8px solid transparent;
+  border-top: 12px solid #000;
+  display: inline-block;
+  width: 0;
+  height: 0;
+}
+
+.attraction__subtitle {
+  display: none;
+}
+.attraction__card__list {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.attraction__card__list__item {
+  margin-bottom: 20px;
+}
+.attraction__card {
+  max-width: 100%;
+  height: 200px;
+  display: flex;
+  background: rgba(238, 131, 9, 0.7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.attraction__card__hover__title {
+  display: none;
+}
+.attraction__card__hover {
+  opacity: 0;
+  transform: scaleY(0);
+}
+.attraction__card__img {
+  width: 35%;
+}
+.attraction__card__img img {
+  width: 100%;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.attraction__card__content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.attraction__card__title {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+.attraction__card__text {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media (min-width: 533px) {
+  .attraction__title {
+    font-size: 18px;
+  }
+  .attraction__card__title {
+    font-size: 22px;
+  }
+  .attraction__card__text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .attraction__card__img img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (min-width: 768px) {
+  .attractions__inner {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .attraction__card__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .attraction__title {
+    font-size: 18px;
+  }
+
+  .attraction__card__list__item {
+    width: 49%;
+  }
+
+  .attraction__card__title {
+    font-size: 20px;
+  }
+  .attraction__card__text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .attraction__card__img img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .attractions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .attractions__inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .attraction__title {
+    font-weight: normal;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .attraction__title::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 130px;
+    height: 3px;
+    background-color: #000;
+    bottom: -20px;
+  }
+  .triangle {
+    display: none;
+  }
+  .attraction__subtitle {
+    max-width: 570px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 26px;
+    margin-top: 20px;
+    margin-bottom: 45px;
+  }
+  .attractions__list {
+    width: 100%;
+  }
+
+  .attractions__list__item {
+    margin-bottom: 30px;
+  }
+  .attraction__card__list {
+    width: 100%;
+    justify-content: center;
+  }
+  .attraction__card__list__item {
+    width: 400px;
+    height: 400px;
+    margin: 0;
+    position: relative;
+  }
+
+  .attraction__card {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 400px;
+    border-radius: 0;
+    background: url(../../assets/images/cities/warsawa/musems/National-Museum-in-Warsaw.jpg)
+      center no-repeat;
+    background-size: cover;
+    box-shadow: none;
+    padding: 0;
+  }
+  .attraction__card__img {
+    display: none;
+  }
+
+  .attraction__card__content {
+    display: none;
+  }
+
+  .attraction__card__hover__title {
+    font-size: 24px;
+    line-height: 30px;
+
+    color: #ffffff;
+  }
+  .attraction__card__hover {
+    transition: all 0.2s linear;
+  }
+  .attraction__card__hover__title {
+    display: block;
+  }
+
+  .attraction__card__list__item:hover .attraction__card__hover {
+    opacity: 1;
+    transform: scaleY(1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 0 90px;
+    width: 400px;
+    height: 400px;
+    background: rgba(138, 113, 94, 0.5);
+    z-index: 20;
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
-import s from "./Cities.module.css";
+import s from "./CitiesPage.module.css";
 
-const Cities = () => {
+const CitiesPage = () => {
   return (
     <section className={s.intro}>
       <div className={s.container}>
@@ -21,4 +21,4 @@ const Cities = () => {
   );
 };
 
-export default Cities;
+export default CitiesPage;

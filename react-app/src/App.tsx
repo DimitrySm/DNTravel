@@ -1,16 +1,24 @@
 import React from "react";
 import "./App.css";
-import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import Cities from "./views/Cities/Cities";
-import Main from "./views/Main/Main";
+import BlogPostPage from "./views/BlogPostPage/BlogPostPage";
+import CitiesPage from "./views/CitiesPage/CitiesPage";
+import CityPage from "./views/CityPage/CityPage";
+import MainPage from "./views/MainPage/MainPage";
+import Footer from "./components/Footer/Footer";
+import BlogsPage from "./views/BlogsPage/BlogsPage";
+import BlogMenuPage from "./views/BlogMenuPage/BlogMenuPage";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Main /> */}
-      <Cities />
+      <BlogMenuPage />
+      {/* <BlogPostPage /> */}
+      {/* <BlogsPage /> */}
+      {/* <MainPage /> */}
+      {/* <CityPage /> */}
+      {/* <CitiesPage /> */}
       {/* <Footer /> */}
     </div>
   );
