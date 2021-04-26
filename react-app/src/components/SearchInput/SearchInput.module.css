@@ -1,0 +1,90 @@
+.searchBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+}
+
+.searchBlock__title {
+  text-align: center;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  margin-bottom: 20px;
+}
+
+.searchBlock__inputWrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  height: 40px;
+}
+
+.inputSearch {
+  background: transparent;
+  width: 80%;
+  padding: 10px 0;
+  height: 40px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #ffffff;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  outline: none;
+}
+
+.inputSearch::placeholder {
+  font-weight: 300;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.searchBtn {
+  height: 40px;
+  background: url(../../assets/images/svg/send-button-icon.svg) center center
+    no-repeat;
+  background-size: contain;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  border-bottom: 2px solid #ffffff;
+}
+
+.searchBtnIcon {
+  height: 40px;
+  width: 40px;
+  transition: all 0.2s linear;
+  fill: #ffffff;
+}
+
+.searchBtnIcon.clicked {
+  transform: translateX(30px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+@media (min-width: 1200px) {
+  .searchBlock__title {
+    font-size: 20px;
+  }
+
+  .inputSearch {
+    font-size: 18px;
+  }
+
+  .inputSearch::placeholder {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,150 @@
+/* ************* INTRO **************** */
+
+.intro {
+  background: url(../../assets/images/bg/cities-bg.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+
+  overflow: hidden;
+}
+.container {
+  padding: 0 50px;
+}
+
+.intro__inner {
+  min-width: 300px;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.7);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 57px;
+}
+
+.intro__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  text-align: center;
+  color: #000000;
+}
+
+.intro__search {
+  padding: 15px 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  color: #000;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+.intro__search::placeholder {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  color: #000;
+}
+
+.intro__btn {
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  color: #ffffff;
+
+  border: none;
+  outline: none;
+  padding: 10px 23px;
+  background: #82abd4;
+  border-radius: 20px;
+
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.intro__btn:hover {
+  background: #82abd4;
+  box-shadow: 0 15px 20px #82abd4;
+  color: white;
+  transform: translateY(-7px);
+}
+
+.intro__btn:active {
+  background: #82abd4;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 533px) {
+  .intro__subtitle {
+    font-size: 24px;
+  }
+
+  .intro__btn {
+    font-size: 16px;
+    padding: 15px 35px;
+  }
+}
+@media (min-width: 768px) {
+  .intro__inner {
+    padding: 50px 57px;
+  }
+
+  .intro__subtitle {
+    font-size: 34px;
+    margin-bottom: 40px;
+  }
+
+  .intro__search {
+    width: 400px;
+  }
+
+  .intro__btn {
+    border-radius: 50px;
+    font-size: 26px;
+    padding: 15px 35px;
+  }
+}
+@media (min-width: 992px) {
+  .intro__inner {
+    padding: 50px 57px;
+  }
+  .intro__title {
+    font-size: 82px;
+    margin-bottom: 60px;
+  }
+
+  .intro__subtitle {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .intro__text {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .intro__btn {
+    border-radius: 50px;
+    font-size: 26px;
+    padding: 20px 45px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
