@@ -8,12 +8,16 @@ import MainPage from "./views/MainPage/MainPage";
 import Footer from "./components/Footer/Footer";
 import BlogsPage from "./views/BlogsPage/BlogsPage";
 import BlogMenuPage from "./views/BlogMenuPage/BlogMenuPage";
+import AttractionPage from "./views/AttractionPage/AttractionPage";
+import AboutUsPage from "./views/AboutUsPage/AboutUsPage";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <BlogMenuPage />
+      <AboutUsPage />
+      {/* <AttractionPage /> */}
+      {/* <BlogMenuPage /> */}
       {/* <BlogPostPage /> */}
       {/* <BlogsPage /> */}
       {/* <MainPage /> */}
