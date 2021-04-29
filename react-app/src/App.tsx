@@ -1,25 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
-import BlogPostPage from "./views/BlogPostPage/BlogPostPage";
 import CitiesPage from "./views/CitiesPage/CitiesPage";
-import CityPage from "./views/CityPage/CityPage";
 import MainPage from "./views/MainPage/MainPage";
 import Footer from "./components/Footer/Footer";
-import BlogsPage from "./views/BlogsPage/BlogsPage";
 import BlogMenuPage from "./views/BlogMenuPage/BlogMenuPage";
-import AttractionPage from "./views/AttractionPage/AttractionPage";
 import AboutUsPage from "./views/AboutUsPage/AboutUsPage";
 import { BrowserRouter, Route } from "react-router-dom";
 
 function App() {
+  const [closedHeaderMenu, setClosedHeaderMenu] = useState(true);
+  const [closedBlogMenu, setclosedBlogMenu] = useState(true);
+
+  const onBlogMenuClick = () => {
+    if (closedBlogMenu === true) {
+      setclosedBlogMenu(false);
+    } else {
+      setclosedBlogMenu(true);
+    }
+  };
+
+  const onClick = () => {
+    if (closedHeaderMenu === true) {
+      setClosedHeaderMenu(false);
+    } else {
+      setClosedHeaderMenu(true);
+    }
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
+        <Header onClick={onClick} closedHeaderMenu={closedHeaderMenu} />
         <Route path="/main" render={() => <MainPage />} />
         <Route path="/cities" render={() => <CitiesPage />} />
-        <Route path="/blogMenu" render={() => <BlogMenuPage />} />
+        <Route
+          path="/blogMenu"
+          render={() => (
+            <BlogMenuPage
+              closedBlogMenu={closedBlogMenu}
+              onBlogMenuClick={onBlogMenuClick}
+            />
+          )}
+        />
         <Route path="/aboutUs" render={() => <AboutUsPage />} />
 
         <Route path="/aboutUs" render={() => <Footer />} />

@@ -3,33 +3,43 @@ import s from "./Header.module.css";
 import moonSVG from "../../assets/images/svg/moon.svg";
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
+type HeaderPropsType = {
+  onClick: () => void;
+  closedHeaderMenu: boolean;
+};
+
+const Header = (props: HeaderPropsType) => {
+  const dropDownMenu = `${s.dropDown__menu} ${
+    props.closedHeaderMenu === false ? s.active : ""
+  }`;
+  const burger = `${s.burger} ${props.closedHeaderMenu === false ? s.on : ""}`;
+
   return (
     <header className={s.header}>
       <div className={s.header__inner}>
         <div className={s.header__burger}>
-          <button className={s.burger}>
+          <button className={burger} onClick={props.onClick}>
             <span></span>
           </button>
         </div>
-        <div className={s.dropDown__menu}>
+        <div className={dropDownMenu} onClick={props.onClick}>
           <NavLink to="/main" className={s.dropDown__menu__link}>
             Главная
           </NavLink>
-          <a href="#3" className={s.dropDown__menu__link}>
+          <NavLink to="/cities" className={s.dropDown__menu__link}>
             Города
-          </a>
-          <a href="#3" className={s.dropDown__menu__link}>
+          </NavLink>
+          <NavLink to="/lifehaks" className={s.dropDown__menu__link}>
             Лайфхаки
-          </a>
-          <a href="#3" className={s.dropDown__menu__link}>
+          </NavLink>
+          <NavLink to="/blogMenu" className={s.dropDown__menu__link}>
             Блог
-          </a>
-          <a href="#3" className={s.dropDown__menu__link}>
+          </NavLink>
+          <NavLink to="/aboutUs" className={s.dropDown__menu__link}>
             О нас
-          </a>
+          </NavLink>
         </div>
-        <nav className={s.av}>
+        <nav className={s.nav}>
           <NavLink
             to="/main"
             className={s.nav__link}

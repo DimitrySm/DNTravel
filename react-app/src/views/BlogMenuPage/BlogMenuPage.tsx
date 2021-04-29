@@ -4,12 +4,24 @@ import BlogPostCard from "../../components/BlogPostCard/BlogPostCard";
 
 import s from "./BlogMenuPage.module.css";
 
-const BlogMenuPage = () => {
+type BlogMenuPagePropsType = {
+  onBlogMenuClick: () => void;
+  closedBlogMenu: boolean;
+};
+
+const BlogMenuPage = (props: BlogMenuPagePropsType) => {
+  const topicsListWrapper = `${s.topics__list__wrapper} ${
+    props.closedBlogMenu === false ? s.active : ""
+  }`;
+  const menuButton = `${s.menuButton} ${
+    props.closedBlogMenu === false ? s.clicked : ""
+  }`;
+
   return (
     <>
       <section className={s.intro}>
         <div className={s.intro__inner}>
-          <div className={s.topics__list__wrapper}>
+          <div className={topicsListWrapper}>
             <ul className={s.topics__list}>
               <h2 className={s.topics__list__title}>Темы блога</h2>
               <li className={s.topics__list__item}>
@@ -27,7 +39,7 @@ const BlogMenuPage = () => {
             </ul>
           </div>
           <div className={s.menuButton__wrapper}>
-            <div className={s.menuButton}>
+            <div className={menuButton} onClick={props.onBlogMenuClick}>
               <span className={s.menuLine}></span>
               <span className={s.menuLine}></span>
               <div className={s.menuCircle}></div>
