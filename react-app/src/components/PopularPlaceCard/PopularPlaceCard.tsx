@@ -1,21 +1,34 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import s from "./PopularPlaceCard.module.css";
 
-const PopularPlaceCard = () => {
+type PopularPlaceCardType = {
+  city: string;
+  country: string;
+  backgroundCardImage: string;
+};
+
+const PopularPlaceCard = (props: PopularPlaceCardType) => {
+  const backgroundCardImage = props.backgroundCardImage;
+
   return (
-    <a href="3" className={s.popularPlaces__card}>
+    <NavLink
+      to="/city"
+      className={s.popularPlaces__card}
+      style={{ backgroundImage: `url(${backgroundCardImage})` }}
+    >
       <div className={s.card__country}>
-        <p>Польша</p>
+        <p>{props.country}</p>
       </div>
       <div className={s.card__city}>
-        <p>Варшава</p>
+        <p>{props.city}</p>
       </div>
       <div className={s.popularPlaces__bgColor}>
         <div className={s.card__city__hover}>
-          <p>Варшава</p>
+          <p>{props.city}</p>
         </div>
       </div>
-    </a>
+    </NavLink>
   );
 };
 

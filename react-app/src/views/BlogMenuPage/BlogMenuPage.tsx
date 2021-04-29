@@ -1,6 +1,7 @@
 import React from "react";
 import sendBbuttonIcon from "../../assets/images/svg/send-button-icon.svg";
 import BlogPostCard from "../../components/BlogPostCard/BlogPostCard";
+import Footer from "../../components/Footer/Footer";
 
 import s from "./BlogMenuPage.module.css";
 
@@ -75,6 +76,7 @@ const BlogMenuPage = (props: BlogMenuPagePropsType) => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

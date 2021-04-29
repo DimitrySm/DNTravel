@@ -1,9 +1,31 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 import PopularPlaceCard from "../../components/PopularPlaceCard/PopularPlaceCard";
 import s from "./MainPage.module.css";
 
-const MainPage = () => {
+type CityType = {
+  id: number;
+  city: string;
+  country: string;
+  discription: string;
+  backgroundCardImage: string;
+};
+
+type MainPagePropsType = {
+  citiesState: Array<CityType>;
+};
+
+const MainPage = (props: MainPagePropsType) => {
+  let popularPlaceCards = props.citiesState.map((s) => (
+    <PopularPlaceCard
+      key={s.id}
+      city={s.city}
+      country={s.country}
+      backgroundCardImage={s.backgroundCardImage}
+    />
+  ));
+
   return (
     <>
       <section className={s.intro}>
@@ -30,9 +52,10 @@ const MainPage = () => {
           <div className={s.popularPlaces__title}>
             <h2>Топ 5 популярных городов</h2>
           </div>
-          <PopularPlaceCard />
+          {popularPlaceCards}
         </div>
       </section>
+      <Footer />
     </>
   );
 };

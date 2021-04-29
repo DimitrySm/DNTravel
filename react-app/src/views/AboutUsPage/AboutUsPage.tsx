@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./AboutUsPage.module.css";
 import socialsSprite from "../../assets/images/svg/socialsSprite.svg";
+import Footer from "../../components/Footer/Footer";
 
 const AboutUsPage = () => {
   return (
@@ -100,6 +101,7 @@ const AboutUsPage = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };
