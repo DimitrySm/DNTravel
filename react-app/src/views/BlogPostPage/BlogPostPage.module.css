@@ -1,0 +1,134 @@
+/* ********** Post *********** */
+.postSection {
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.postSection__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 15px;
+  position: relative;
+  width: 100%;
+}
+
+.post__img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.post__img img {
+  width: 100%;
+
+  border-radius: 0;
+}
+
+.post__date {
+  font-family: Source Sans Pro;
+
+  position: absolute;
+  bottom: 0;
+  font-size: 16px;
+  right: 15px;
+}
+
+.post__content {
+  width: 100%;
+}
+
+.post__tags {
+  display: flex;
+  align-items: center;
+}
+.post__tags span {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  margin-right: 5px;
+  display: flex;
+
+  color: #000000;
+  text-transform: uppercase;
+}
+.post__tags span:last-child {
+  margin-right: 0;
+}
+.post__title {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  margin: 20px 0;
+}
+
+.post__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+  overflow: hidden;
+}
+
+@media (min-width: 533px) {
+  .post__content {
+    padding: 0 20px;
+  }
+  .post__date {
+    right: 35px;
+  }
+}
+@media (min-width: 768px) {
+  .postSection {
+    margin-top: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  .postSectionBg {
+    height: 600px;
+    background: url(../../assets/images/cities/warsawa/attractions/Warsaw-Palace-Square-3.jpg)
+      center no-repeat;
+    background-size: cover;
+  }
+  .postSection {
+    margin: 0;
+  }
+  .post__img {
+    display: none;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .post__date {
+    font-size: 18px;
+    right: 15px;
+  }
+
+  .post__tags span {
+    font-size: 18px;
+    line-height: 22px;
+
+    text-transform: uppercase;
+  }
+
+  .post__title {
+    font-size: 28px;
+  }
+
+  .post__text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

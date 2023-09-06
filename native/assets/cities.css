@@ -1,0 +1,384 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  min-width: 360px;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  color: #000;
+  font-size: 14px;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #213f36;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* *********  HEADER  *************** */
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header__inner {
+  width: 100%;
+  background-color: #fff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+}
+
+.dropDown__menu {
+  position: absolute;
+  display: flex;
+  top: 70px;
+  opacity: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 210px;
+  height: 240px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  background-color: #7ebfc3;
+  transform: scaleY(0);
+  transform-origin: top center;
+
+  padding: 30px 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropDown__menu.active {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.dropDown__menu__link {
+  font-size: 20px;
+  line-height: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+nav {
+  display: none;
+}
+
+/* Burger */
+.header__burger {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button.burger {
+  width: 30px;
+  height: 15px;
+  border: none;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+button.burger:focus {
+  outline: none;
+}
+button.burger:after,
+button.burger:before {
+  width: 100%;
+  height: 4px;
+  border-radius: 100px;
+  position: absolute;
+  left: 0px;
+  background: #7ebfc3;
+}
+button.burger:after,
+button.burger:before {
+  content: "";
+}
+button.burger:after {
+  top: 0px;
+  margin-top: 0px;
+  transition: transform 0.2s, 0.2s all 0.4s;
+}
+button.burger:before {
+  bottom: 0px;
+  margin-bottom: 0px;
+  transition: transform 0.2s, 0.2s all 0.4s;
+}
+button.burger.on:after {
+  transform: rotate(45deg);
+  top: 50%;
+  margin-top: -2px;
+  transition: all 0.2s, 0.2s transform 0.4s;
+}
+button.burger.on:before {
+  transform: rotate(-45deg);
+  bottom: 50%;
+  margin-bottom: -2px;
+  transition: all 0.2s, 0.2s transform 0.4s;
+}
+/*  */
+.light__mode {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.light__mode__btn {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.moon:active {
+  fill: #213f36;
+}
+
+.moon {
+  transition: all 0.2s linear;
+  width: 18px;
+  height: 24px;
+  fill: #7ebfc3;
+}
+
+@media (min-width: 768px) {
+  .header__inner {
+    height: 100px;
+    padding: 0 50px;
+  }
+  .dropDown__menu {
+    top: 110px;
+    width: 200px;
+    height: 300px;
+  }
+  .dropDown__menu__link {
+    font-size: 22px;
+  }
+  button.burger {
+    width: 60px;
+    height: 30px;
+  }
+  .moon {
+    width: 43px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 0px 0px 10px 10px;
+  }
+  .header__burger,
+  .light__mode {
+    display: none;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav__link {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 100%;
+    text-align: center;
+
+    color: #ffffff;
+
+    transition: all 0.2s linear;
+  }
+  .nav__link:hover {
+    color: #7ebfc3;
+  }
+}
+
+/* ************* INTRO **************** */
+
+.intro {
+  background: url(../images/bg/cities-bg.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+
+  overflow: hidden;
+}
+.container {
+  padding: 0 50px;
+}
+
+.intro__inner {
+  min-width: 300px;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.7);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 57px;
+}
+
+.intro__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  text-align: center;
+  color: #000000;
+}
+
+.intro__search {
+  padding: 15px 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  color: #000;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+.intro__search::placeholder {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  color: #000;
+}
+
+.intro__btn {
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  color: #ffffff;
+
+  border: none;
+  outline: none;
+  padding: 10px 23px;
+  background: #82abd4;
+  border-radius: 20px;
+
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.intro__btn:hover {
+  background: #82abd4;
+  box-shadow: 0 15px 20px #82abd4;
+  color: white;
+  transform: translateY(-7px);
+}
+
+.intro__btn:active {
+  background: #82abd4;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 533px) {
+  .intro__subtitle {
+    font-size: 24px;
+  }
+
+  .intro__btn {
+    font-size: 16px;
+    padding: 15px 35px;
+  }
+}
+@media (min-width: 768px) {
+  .intro__inner {
+    padding: 50px 57px;
+  }
+
+  .intro__subtitle {
+    font-size: 34px;
+    margin-bottom: 40px;
+  }
+
+  .intro__search {
+    width: 400px;
+  }
+
+  .intro__btn {
+    border-radius: 50px;
+    font-size: 26px;
+    padding: 15px 35px;
+  }
+}
+@media (min-width: 992px) {
+  .intro__inner {
+    padding: 50px 57px;
+  }
+  .intro__title {
+    font-size: 82px;
+    margin-bottom: 60px;
+  }
+
+  .intro__subtitle {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .intro__text {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .intro__btn {
+    border-radius: 50px;
+    font-size: 26px;
+    padding: 20px 45px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

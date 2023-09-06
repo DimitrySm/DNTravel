@@ -1,0 +1,196 @@
+.breadcrumb {
+  list-style: none;
+  display: flex;
+
+  padding-left: 0px;
+  margin: 0;
+}
+
+.breadcrumbItem > .breadcrumbLink,
+.breadcrumbItem.active {
+  color: #fff;
+  display: block;
+  background: #7ebfc3;
+  text-decoration: none;
+  position: relative;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 10px 0 5px;
+  text-align: center;
+  margin-right: 23px;
+  user-select: none;
+  transition: all 0.2s linear;
+}
+
+.breadcrumbItem:first-child > .breadcrumbLink {
+  padding-left: 15px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.breadcrumbItem:last-child > .breadcrumbLink,
+.breadcrumbItem.active {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-right: 0;
+  padding-right: 15px;
+}
+
+.breadcrumbItem:first-child > .breadcrumbLink::before,
+.breadcrumbItem:last-child > .breadcrumbLink::after {
+  border: none;
+}
+
+.breadcrumbItem > .breadcrumbLink::before,
+.breadcrumbItem > .breadcrumbLink::after,
+.breadcrumbItem.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 0 solid #7ebfc3;
+  border-width: 17px 10px;
+  width: 0;
+  height: 0;
+  transition: all 0.2s linear;
+}
+
+.breadcrumbItem > .breadcrumbLink::before,
+.breadcrumbItem.active::before {
+  left: -20px;
+  border-left-color: transparent;
+}
+
+.breadcrumbItem > .breadcrumbLink::after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: #7ebfc3;
+}
+
+.breadcrumbItem > .breadcrumbLink:hover {
+  background-color: #4e8083;
+}
+
+.breadcrumbItem > .breadcrumbLink:hover::before {
+  border-color: #4e8083;
+  border-left-color: transparent;
+}
+
+.breadcrumbItem > .breadcrumbLink:hover::after {
+  border-left-color: #4e8083;
+}
+
+.breadcrumbItem.active {
+  color: #7ebfc3;
+  background-color: #f3e5f5;
+}
+
+.breadcrumbItem.active::before {
+  border-color: #f3e5f5;
+  border-left-color: transparent;
+}
+
+/* *******************Intro*************** */
+
+.intro {
+  height: 330px;
+  background: url(../../assets/images/cities/warsawa/attractions/Warsaw-Palace-Square-2.jpg)
+    center no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro__inner {
+  padding: 20px 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.intro__inner__title {
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+}
+
+.intro__inner__text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    height: 480px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    align-items: start;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .intro__inner {
+    width: 450px;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  .intro__inner__title {
+    text-align: start;
+    color: #000;
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+  .intro__inner__text {
+    display: block;
+    font-size: 24px;
+    color: #000;
+  }
+}
+
+/* *****************Attraction************ */
+
+.attraction__inner {
+  padding: 20px 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+.breadcrumb__wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 533px) {
+  .attraction__inner {
+    padding: 20px 35px;
+  }
+}
+@media (min-width: 533px) {
+  .attraction__inner {
+    padding: 20px 35px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .breadcrumb__wrapper {
+    margin-bottom: 50px;
+  }
+}

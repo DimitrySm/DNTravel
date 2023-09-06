@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,800;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/header.css" />
+    <link rel="stylesheet" href="../assets/index.css" />
+    <title>D&N Travel</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__burger">
+          <button class="burger"><span></span></button>
+        </div>
+        <div class="dropDown__menu">
+          <a href="#" class="dropDown__menu__link">Главная</a>
+          <a href="#" class="dropDown__menu__link">Города</a>
+          <a href="#" class="dropDown__menu__link">Лайфхаки</a>
+          <a href="#" class="dropDown__menu__link">Блог</a>
+          <a href="#" class="dropDown__menu__link">О нас</a>
+        </div>
+        <nav class="nav">
+          <a href="#" class="nav__link active">Главная</a>
+          <a href="#" class="nav__link">Города</a>
+          <a href="#" class="nav__link">Лайфхаки</a>
+          <a href="#" class="nav__link">Блог</a>
+          <a href="#" class="nav__link">О нас</a>
+        </nav>
+        <div class="light__mode">
+          <button class="light__mode__btn">
+            <svg class="moon">
+              <use xlink:href="../images/svg/moon.svg#moon"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="intro">
+      <div class="container">
+        <div class="intro__inner">
+          <h1 class="intro__title">
+            D&N <br />
+            Travel
+          </h1>
+          <h3 class="intro__subtitle">
+            Ваш путиводитель по городам со всего мира.
+          </h3>
+          <p class="intro__text">
+            Не упусти всё самое интересное из путешесвия!
+          </p>
+          <button class="intro__btn">Поехали</button>
+        </div>
+      </div>
+    </section>
+    <section class="popular-places">
+      <div class="popular-places__inner">
+        <div class="popular-places__title">
+          <h2>Топ 5 популярных городов</h2>
+        </div>
+        <a href="" class="popular-places__card">
+          <div class="card__country"><p>Польша</p></div>
+          <div class="card__city"><p>Варшава</p></div>
+          <div class="popular-places__bg-color">
+            <div class="card__city__hover"><p>Варшава</p></div>
+          </div>
+        </a>
+
+        <a href="" class="popular-places__card popular-places__card1">
+          <div class="card__country"><p>Польша</p></div>
+          <div class="card__city"><p>Варшава</p></div>
+          <div class="popular-places__bg-color">
+            <div class="card__city__hover"><p>Варшава</p></div>
+          </div>
+        </a>
+        <a href="" class="popular-places__card">
+          <div class="card__country"><p>Польша</p></div>
+          <div class="card__city"><p>Варшава</p></div>
+          <div class="popular-places__bg-color">
+            <div class="card__city__hover"><p>Варшава</p></div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__links">
+          <a href="#" class="footer__link">Главная</a>
+          <a href="#" class="footer__link">Города</a>
+          <a href="#" class="footer__link">Лайфхаки</a>
+          <a href="#" class="footer__link">Блог</a>
+          <a href="#" class="footer__link">О нас</a>
+        </div>
+        <div class="footer__social">
+          <div class="footer__social__wrapper">
+            <a href="" class="footer__social__link">
+              <svg class="social-icon">
+                <use
+                  xlink:href="../images/svg/socialsSprite.svg#instagram"
+                ></use>
+              </svg>
+            </a>
+          </div>
+          <div class="footer__social__wrapper">
+            <a href="" class="footer__social__link">
+              <svg class="social-icon">
+                <use xlink:href="../images/svg/socialsSprite.svg#vk"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="footer__social__wrapper">
+            <a href="" class="footer__social__link">
+              <svg class="social-icon">
+                <use xlink:href="../images/svg/socialsSprite.svg#email"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/headerBurger.js"></script>
+  </body>
+</html>
